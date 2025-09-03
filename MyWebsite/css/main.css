@@ -1,11 +1,9 @@
-@font-face {
-    font-family: Roboto;
-    src: url(../fonts/Roboto-Regular.ttf)
-}
-
 body {
-    font-family: Roboto;
-    position: absolute center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
 }
 
 .wrapper-main {

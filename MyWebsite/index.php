@@ -13,30 +13,30 @@
     <main>
 
         <section class="wrapper-main">
-        <!-- tells php how we want to submit the data?-->
-        <form action="includes/formhandler.php" method="post">
-            <label for="firstname">Firstname?</label><br>
-        <!-- name attribute is important because its the referecnce name that we will use in the next page -->
-            <input required id="firstname" type="text" name="firstname" placeholder="Firstname...">
-            <br><br>
+            <!-- tells php how we want to submit the data?-->
+            <form action="includes/formhandler.php" method="post">
+                <label for="firstname">Firstname?</label><br>
+            <!-- name attribute is important because its the referecnce name that we will use in the next page -->
+                <input required id="firstname" type="text" name="firstname" placeholder="Firstname...">
+                <br><br>
 
-           <label for="lastname">Lastname?</label><br>
-           <input id="lastname" type="text" name="lastname" placeholder="Lastname..."> 
-           <br><br>
+                <label for="lastname">Lastname?</label><br>
+                <input id="lastname" type="text" name="lastname" placeholder="Lastname..."> 
+                <br><br>
 
-           <label for="favouritepet">Favourite Pet?</label><br>
-           <select id="favouritepet" name="favouritepet">
-                <option value="none">None</option>
-                <option value="dog">Dog</option>
-                <option value="cat">Cat</option>
-                <option value="bird">Bird</option>
-            </select>
-            <br><br>
+                <label for="favouritepet">Favourite Pet?</label><br>
+                <select id="favouritepet" name="favouritepet">
+                        <option value="none">None</option>
+                        <option value="dog">Dog</option>
+                        <option value="cat">Cat</option>
+                        <option value="bird">Bird</option>
+                    </select>
+                    <br><br>
 
-            <button type="submit">Submit</button>
-        </form> 
+                <button type="submit">Submit</button>
+            </form>
+        </section> 
     </main>
-</section>
 
 </body>
 </html>
