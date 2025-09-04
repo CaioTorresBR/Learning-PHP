@@ -27,13 +27,6 @@ input:focus {
     outline: 1px solid blue;
 }
 
-input[type="checkbox"] {
-    appearance: checkbox;
-}
-
-input[type="submit"] {
-    appearance: radio;
-}
 
 select {
     border: 1px solid #ccc;

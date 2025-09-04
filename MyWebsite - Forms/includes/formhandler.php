@@ -1,6 +1,6 @@
 <?php 
 
-// how to let the user not access the code, if they didnt
+// how to not let the user access the code, if they didnt
 //  access the file using the form
 
 //var_dump($_SERVER["REQUEST_METHOD"]);
@@ -19,7 +19,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" ) {
     $lastname = htmlspecialchars($_POST["lastname"]);
     $favouritepet = htmlspecialchars($_POST["favouritepet"]);
 
+    // if this returns 'true' it means that there's no data inside of the variable
+    // which means the user did not submit a firstname  --> so we send the user back to the front page
+    if (empty($firstname)) {
+        header("Location: ../index.php");
+        exit();
 
+        // using required="" attribute on the frontend is dangerous for the security of the website
+        // because the user can change it easily while inspecting the page and 
+    }
 
     echo "These are the data, that the user submitted";
     echo "<br>";
@@ -29,5 +37,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" ) {
     echo "<br>";
     echo $favouritepet;
 
-    header("Location: ../index.php");
+    // this would send the user back to the page
+    //header("Location: ../index.php");
+} else {
+   header("Location: ../index.php"); 
 }
+
+?>

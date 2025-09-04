@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyFirstPHPWebsite</title>
 
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css?v=2">
 </head>
 <body>
     
@@ -16,7 +16,7 @@
             <!-- tells php how we want to submit the data?-->
             <form action="includes/formhandler.php" method="post">
                 <label for="firstname">Firstname?</label><br>
-            <!-- name attribute is important because its the referecnce name that we will use in the next page -->
+                <!-- name attribute is important because its the referecnce name that we will use in the next page -->
                 <input required id="firstname" type="text" name="firstname" placeholder="Firstname...">
                 <br><br>
 
