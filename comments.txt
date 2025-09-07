@@ -1,0 +1,18 @@
+CREATE TABLE comments (
+	 
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    username VARCHAR(30) NOT NULL,
+    comment_text TEXT NOT NULL, # using TEXT because it'll use more characters
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIME,
+    
+    # --- Foreign key ---
+    # relationship between one database table and another
+    # we're gonna tie one user from the users table to a comment in comments table
+    users_id INT(11), # will tie both databases
+    PRIMARY KEY (id),
+    FOREIGN KEY (users_id) REFERENCES users (id) ON DELETE SET NULL # THIS WILL REFERENCE AN ID FROM ANOTHER TABLE
+    
+    # ON DELETE NO ACTION ->  default, will make no action happen if we delete an user
+    # ON DELETE CASCADE -> will delete any comment created by an user, if the user is deleted
+    # ON DELETE SET NULL -> will set the users_id null in case an user is deleted
+);

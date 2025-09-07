@@ -1,0 +1,18 @@
+INSERT INTO users (username, pwd, email) VALUES ('Krossing', 'dani123', 'johndoe@gmail.com');
+
+// updates infos
+UPDATE users SET username = "BasseCOol', pwd = 'basse456' WHERE username = 'Basse' OR id = 2
+
+// 
+DELETE FROM users WHERE id = 3
+
+# output data from user id 3
+SELECT username, email FROM users WHERE id = 3;
+# output every data from the specific user
+SELECT * from users WHERE id = 2
+
+# JOIN combines data from two tables together data, from a row has the same data inside 
+SELECT * FROM users INNER JOIN comments ON users.id = comments;
+
+# selects all users, no matter if he has a comment
+SELECT * FROM users LEFT JOIN comments ON users.id = comments.users_id;
