@@ -2,13 +2,17 @@ CREATE TABLE comments (
 	 
     id INT(11) NOT NULL AUTO_INCREMENT,
     username VARCHAR(30) NOT NULL,
-    comment_text TEXT NOT NULL, # using TEXT because it'll use more characters
+
+     # using TEXT because it'll use more characters
     created_at DATETIME NOT NULL DEFAULT CURRENT_TIME,
-    
+
+    comment_text TEXT NOT NULL,
+
     # --- Foreign key ---
     # relationship between one database table and another
     # we're gonna tie one user from the users table to a comment in comments table
-    users_id INT(11), # will tie both databases
+
+    users_id INT(11), 
     PRIMARY KEY (id),
     FOREIGN KEY (users_id) REFERENCES users (id) ON DELETE SET NULL # THIS WILL REFERENCE AN ID FROM ANOTHER TABLE
     

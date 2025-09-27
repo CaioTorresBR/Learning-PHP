@@ -1,35 +1,81 @@
+/* Center the page */
 body {
+    font-family: Arial, sans-serif;
+    background: #f4f6fb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     min-height: 100vh;
+    padding-top: 50px;
     margin: 0;
+    color: #333;
 }
 
-
-.calc-error {
-    color: red ;
+/* Calculator form */
+form {
+    background: #fff;
+    padding: 25px 35px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
 }
 
-.calc-result {
-    color: darkblue;
+/* Inputs and select */
+input[type="number"],
+select {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    min-width: 120px;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
 }
 
+input[type="number"]:focus,
+select:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 6px rgba(108, 99, 255, 0.3);
+    outline: none;
+}
 
+/* Button */
 button {
-    background-color: bisque;
-    padding: 20px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    background: #6c63ff;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease;
 }
 
 button:hover {
-    background-color: rgb(209, 189, 164);
-    cursor: pointer;
+    background: #5a52e0;
+    transform: scale(1.05);
 }
 
-input, select {
-    border: 1px solid #ccc;
-    padding: 8px;
+button:active {
+    transform: scale(0.95);
 }
 
-select:hover {
-    background-color:rgb(229, 241, 203);
+/* Result and errors */
+.calc-result {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2e7d32; /* green */
 }
 
-
+.calc-error {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #d32f2f; /* red */
+    font-weight: bold;
+}

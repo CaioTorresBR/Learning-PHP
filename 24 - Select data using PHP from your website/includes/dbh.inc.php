@@ -1,6 +1,8 @@
 <?php 
 
 // DSN -> Data Source Name
+
+//
 $dsn = "mysql:host=localhost;dbname=my_first_database";
 // database username
 $dbusername = "root";
@@ -8,6 +10,10 @@ $dbusername = "root";
 $dbpassword = "";
 
 // Ways to connect to a database:
+// mysql connection
+// mysql i -> IMPROVED VERSION
+// pdo -> php data objects -> more flexible
+
 try {
     // instantiates a new pdo object
     // creating a database connection object
